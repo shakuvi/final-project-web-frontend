@@ -9,7 +9,11 @@ export default function TopNavBar() {
       <Grid2
         container
         justifyContent="flex-end"
-        sx={{ backgroundColor: "#FFD18F" }}
+        sx={{
+          backgroundColor: "#FFD18F",
+          height: "75px",
+          alignItems: "center",
+        }}
       >
         <Grid2 Item pr={3}>
           <Profile />

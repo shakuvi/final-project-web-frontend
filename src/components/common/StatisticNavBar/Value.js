@@ -1,5 +1,10 @@
+import { Typography } from "@mui/material";
 import React from "react";
 
-export default function Value() {
-  return <div>Value</div>;
+export default function Value({ val }) {
+  return (
+    <div>
+      <Typography>{val}</Typography>
+    </div>
+  );
 }
