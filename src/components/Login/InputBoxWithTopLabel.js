@@ -4,8 +4,8 @@ import React from "react";
 export default function InputBoxWithTopLabel({ info }) {
   return (
     <div style={{ textAlign: "left" }}>
-      <Typography>{info}</Typography>
-      <TextField variant="outlined" fullWidth />
+      <Typography>{info.label}</Typography>
+      <TextField variant="outlined" fullWidth placeholder={info.place} />
     </div>
   );
 }

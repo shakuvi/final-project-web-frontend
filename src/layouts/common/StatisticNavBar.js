@@ -5,29 +5,30 @@ import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import StarBorderOutlinedIcon from "@mui/icons-material/StarBorderOutlined";
 import AccountBalanceWalletOutlinedIcon from "@mui/icons-material/AccountBalanceWalletOutlined";
 
+const snavitems = [
+  {
+    image: <ShoppingCartOutlinedIcon sx={{ fontSize: "60px" }} />,
+    description: "Food Delovered",
+    value: "445",
+  },
+  {
+    image: <StarBorderOutlinedIcon sx={{ fontSize: "60px" }} />,
+    description: "Satisfaction Rating",
+    value: "98.7%",
+  },
+  {
+    image: (
+      <AccountBalanceWalletOutlinedIcon
+        sx={{ fontSize: "60px" }}
+        fontSize="large"
+      />
+    ),
+    description: "Balance",
+    value: "LKR 27599.87",
+  },
+];
+
 export default function StatisticNavBar() {
-  const snavitems = [
-    {
-      image: <ShoppingCartOutlinedIcon sx={{ fontSize: "60px" }} />,
-      description: "Food Delovered",
-      value: "445",
-    },
-    {
-      image: <StarBorderOutlinedIcon sx={{ fontSize: "60px" }} />,
-      description: "Satisfaction Rating",
-      value: "98.7%",
-    },
-    {
-      image: (
-        <AccountBalanceWalletOutlinedIcon
-          sx={{ fontSize: "60px" }}
-          fontSize="large"
-        />
-      ),
-      description: "Balance",
-      value: "LKR 27599.87",
-    },
-  ];
   return (
     <div>
       <Grid2
