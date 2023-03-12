@@ -8,12 +8,20 @@ export default function SideNavBar() {
   return (
     <div>
       <Grid2 container justifyContent="center" direction="column">
-        <LogoImage />
-        <Grid2 container pl={3}>
-          <span>Menu</span>
+        <Grid2 Item>
+          <LogoImage />
         </Grid2>
-        <Menu />
-        <Logout />
+        <Grid2 container direction="column" alignItems="flex-start">
+          <Grid2 Item pl={2}>
+            MENU
+          </Grid2>
+          <Grid2 Item>
+            <Menu />
+          </Grid2>
+        </Grid2>
+        <Grid2 Item>
+          <Logout />
+        </Grid2>
       </Grid2>
     </div>
   );
