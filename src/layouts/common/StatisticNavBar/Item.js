@@ -9,7 +9,7 @@ export default function Item({ info }) {
     <div>
       <Grid2 container alignItems="center">
         <Image val={info.image} />
-        <Grid2 Item>
+        <Grid2 container alignItems="flex-start" direction="column" pl={1}>
           <Discription val={info.description} />
           <Value val={info.value} />
         </Grid2>
