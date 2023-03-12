@@ -1,25 +1,21 @@
-import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 import React from "react";
-import Email from "../../components/Login/Email";
 import Button from "../../components/Login/Button";
+import { Typography } from "@mui/material";
+import InputBoxWithTopLabel from "../../components/Login/InputBoxWithTopLabel";
 
 export default function LoginLayout() {
   return (
-    <div>
-      <Grid2 container>
-        <Grid2 Item xs={12}>
-          <span>Login</span>
-        </Grid2>
-        <Grid2 Item xs={12}>
-          <Email />
-        </Grid2>
-        <Grid2 Item xs={12}>
-          <Email />
-        </Grid2>
-        <Grid2 Item xs={12}>
-          <Button />
-        </Grid2>
-      </Grid2>
+    <div
+      style={{
+        marginLeft: "auto",
+        marginRight: "auto",
+        width: "30%",
+      }}
+    >
+      <Typography>Login</Typography>
+      <InputBoxWithTopLabel info={"User Name"} />
+      <InputBoxWithTopLabel info={"Password"} />
+      <Button />
     </div>
   );
 }

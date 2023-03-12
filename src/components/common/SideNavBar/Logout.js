@@ -9,7 +9,7 @@ export default function Logout() {
         sx={{
           backgroundColor: "#FD5C25",
           textTransform: "none",
-          width: 200,
+          width: 150,
         }}
       >
         Log Out
