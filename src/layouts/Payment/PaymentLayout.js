@@ -4,7 +4,7 @@ import PaymentTable from "./PaymentTable";
 
 export default function PaymentLayout() {
   return (
-    <div style={{ textAlign: "left", paddingRight: "20px" }}>
+    <div style={{ textAlign: "left" }}>
       <Typography>Payment Info</Typography>
       <PaymentTable />
     </div>

@@ -7,8 +7,8 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Profile from "../common/TopNavBar/Profile";
 
-const createData = (cusromer, type, count, date, time, status) => {
-  return { cusromer, type, count, date, time, status };
+const createData = (customer, type, count, date, time, status) => {
+  return { customer, type, count, date, time, status };
 };
 
 const rows = [createData(<Profile />, 159, 6.0, 24, 4.0, 9)];
@@ -29,10 +29,13 @@ export default function PaymentTable() {
             </TableRow>
           </TableHead>
           <TableBody>
-            {rows.map((row) => (
-              <TableRow key={row.name}>
+            {rows.map((row, key) => (
+              <TableRow
+                key={key}
+                sx={{ ":hover": { backgroundColor: "#F8E6CC" } }}
+              >
                 <TableCell component="th" scope="row">
-                  {row.cusromer}
+                  {row.customer}
                 </TableCell>
                 <TableCell align="left">{row.type}</TableCell>
                 <TableCell align="left">{row.count}</TableCell>

@@ -4,7 +4,7 @@ import OrderTable from "./OrderTable";
 
 export default function FoodOrders() {
   return (
-    <div style={{ textAlign: "left", paddingRight: "20px" }}>
+    <div style={{ textAlign: "left" }}>
       <Typography>Orders</Typography>
       <OrderTable />
     </div>
