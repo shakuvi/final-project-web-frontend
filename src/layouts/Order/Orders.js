@@ -1,4 +1,5 @@
 import {
+  Drawer,
   Table,
   TableBody,
   TableCell,
@@ -15,6 +16,12 @@ const rows = [
 
 export default function Orders() {
   const [selectedRow, setSelectedRow] = React.useState(null);
+  const [drawerOpen, setDrawerOpen] = React.useState(false);
+
+  const toggleDrawer = () => {
+    setDrawerOpen(!drawerOpen);
+  };
+
   return (
     <div>
       <Table>
@@ -33,7 +40,10 @@ export default function Orders() {
             <TableRow
               key={key}
               hover
-              onClick={() => setSelectedRow(row)}
+              onClick={() => {
+                setSelectedRow(row);
+                toggleDrawer();
+              }}
               style={selectedRow === row ? { backgroundColor: "#F8E6CC" } : {}}
             >
               <TableCell>{row.name}</TableCell>
@@ -46,6 +56,18 @@ export default function Orders() {
           ))}
         </TableBody>
       </Table>
+      <Drawer
+        anchor="right"
+        open={drawerOpen}
+        onClose={toggleDrawer}
+        PaperProps={{
+          sx: {
+            backgroundColor: "#F7EEE2",
+          },
+        }}
+      >
+        <div style={{ width: 300 }}></div>
+      </Drawer>
     </div>
   );
 }
