@@ -5,7 +5,14 @@ export default function InputBoxWithTopLabel({ info }) {
   return (
     <div style={{ textAlign: "left" }}>
       <Typography>{info.label}</Typography>
-      <TextField variant="outlined" fullWidth placeholder={info.place} />
+      <TextField
+        fullWidth
+        placeholder={info.place}
+        sx={{
+          border: "2px solid #FD5C25",
+          borderRadius: 3,
+        }}
+      />
     </div>
   );
 }

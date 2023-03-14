@@ -1,19 +1,51 @@
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableRow,
+} from "@mui/material";
 import React from "react";
 
-import { Typography } from "@mui/material";
-import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
+const rows = [
+  { id: 1, name: "John", age: 25 },
+  { id: 2, name: "Jane", age: 30 },
+  { id: 3, name: "Bob", age: 35 },
+];
 
 export default function Orders() {
+  const [selectedRow, setSelectedRow] = React.useState(null);
   return (
     <div>
-      <Grid2 container justifyContent={"space-between"}>
-        <Typography>Customer</Typography>
-        <Typography>Order Type</Typography>
-        <Typography>Order Date</Typography>
-        <Typography>Order Time</Typography>
-        <Typography>Order Items</Typography>
-        <Typography>Order Status</Typography>
-      </Grid2>
+      <Table>
+        <TableHead>
+          <TableRow>
+            <TableCell>Customer</TableCell>
+            <TableCell>Order Type</TableCell>
+            <TableCell>Order Date</TableCell>
+            <TableCell>Order Time</TableCell>
+            <TableCell>Order Count</TableCell>
+            <TableCell>Order Status</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {rows.map((row, key) => (
+            <TableRow
+              key={key}
+              hover
+              onClick={() => setSelectedRow(row)}
+              style={selectedRow === row ? { backgroundColor: "#F8E6CC" } : {}}
+            >
+              <TableCell>{row.name}</TableCell>
+              <TableCell>{row.age}</TableCell>
+              <TableCell>{row.age}</TableCell>
+              <TableCell>{row.age}</TableCell>
+              <TableCell>{row.age}</TableCell>
+              <TableCell>{row.age}</TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
     </div>
   );
 }
