@@ -11,6 +11,10 @@ export default function InputBoxWithTopLabel({ info }) {
         sx={{
           border: "2px solid #FD5C25",
           borderRadius: 3,
+          "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
+            {
+              borderColor: "transparent",
+            },
         }}
       />
     </div>

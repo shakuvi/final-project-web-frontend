@@ -7,6 +7,7 @@ import {
   TableRow,
 } from "@mui/material";
 import React from "react";
+import OrderDrawer from "./OrderDrawer";
 
 const rows = [
   { id: 1, name: "John", age: 25 },
@@ -65,8 +66,15 @@ export default function Orders() {
             backgroundColor: "#F7EEE2",
           },
         }}
+        sx={{
+          "& .MuiBackdrop-root": {
+            backgroundColor: "transparent",
+          },
+        }}
       >
-        <div style={{ width: 300 }}></div>
+        <div style={{ width: 350 }}>
+          <OrderDrawer />
+        </div>
       </Drawer>
     </div>
   );
