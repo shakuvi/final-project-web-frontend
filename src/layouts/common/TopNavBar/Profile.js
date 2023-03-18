@@ -6,7 +6,7 @@ import ProfileName from "../../../components/common/TopNavBar/ProfileName";
 export default function Profile() {
   return (
     <div>
-      <Grid2 container spacing={1}>
+      <Grid2 container spacing={1} alignItems="center">
         <Grid2 Item>
           <ProfilePicture />
         </Grid2>

@@ -11,6 +11,7 @@ export default function LoginButton() {
           textTransform: "none",
           width: 200,
         }}
+        style={{ background: "linear-gradient(to right, #FE6329, #FDBB29)" }}
       >
         Login
       </Button>
