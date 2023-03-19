@@ -7,15 +7,15 @@ import ThreeStatusButtons from "./Progress/ThreeStatusButtons";
 export default function DrawerProgress() {
   return (
     <div>
-      <Grid2 container alignItems="center" spacing={3}>
-        <Grid2 item>
+      <Grid2 container alignItems="center">
+        <Grid2 item xs={3}>
           <Avatar
             alt="Remy Sharp"
             src="/static/images/avatar/1.jpg"
             sx={{ width: 56, height: 56 }}
           />
         </Grid2>
-        <Grid2 item>
+        <Grid2 item xs={9}>
           <OrderNumber />
           <ThreeStatusButtons />
         </Grid2>
