@@ -7,7 +7,6 @@ export default function LoginButton() {
       <Button
         variant="contained"
         sx={{
-          backgroundColor: "#FD5C25",
           textTransform: "none",
           width: 200,
         }}
