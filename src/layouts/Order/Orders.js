@@ -72,7 +72,7 @@ export default function Orders() {
           },
         }}
       >
-        <div style={{ width: 400 }}>
+        <div style={{ width: 450 }}>
           <OrderDrawer />
         </div>
       </Drawer>

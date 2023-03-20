@@ -3,9 +3,15 @@ import StatusButton from "../../../../components/order/StatusButton";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 export default function ThreeStatusButtons() {
   const statusButton = [
-    { name: "Preparering" },
-    { name: "completed" },
-    { name: "Delivered " },
+    {
+      name: "Preparering",
+      style: { backgroundColor: "#FBCAFF" },
+    },
+    { name: "completed", style: { backgroundColor: "#DAFFAA" } },
+    {
+      name: "Delivered ",
+      style: { backgroundColor: "#B1D0FF" },
+    },
   ];
 
   return (
