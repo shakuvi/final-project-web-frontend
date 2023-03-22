@@ -4,6 +4,7 @@ import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import StarBorderOutlinedIcon from "@mui/icons-material/StarBorderOutlined";
 import AccountBalanceWalletOutlinedIcon from "@mui/icons-material/AccountBalanceWalletOutlined";
+import { Divider } from "@mui/material";
 
 const snavitems = [
   {
@@ -45,6 +46,9 @@ export default function StatisticNavBar() {
           );
         })}
       </Grid2>
+      <div style={{ paddingBottom: 15 }}>
+        <Divider />
+      </div>
     </div>
   );
 }

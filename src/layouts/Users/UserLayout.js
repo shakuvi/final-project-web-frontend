@@ -12,7 +12,7 @@ export default function UserLayout() {
           <Typography>User</Typography>
         </Grid2>
         <Grid2 item>
-          <UserButton />
+          <UserButton info={"Add new User"} />
         </Grid2>
       </Grid2>
       <User />
