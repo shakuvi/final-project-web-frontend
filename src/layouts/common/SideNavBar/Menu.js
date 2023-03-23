@@ -8,7 +8,6 @@ const items = [
   { title: "Users", route: "users" },
   { title: "Reviews", route: "reviews" },
   { title: "Foods", route: "foods" },
-  { title: "Payment", route: "payment" },
 ];
 
 export default function Menu() {

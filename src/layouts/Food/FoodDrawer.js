@@ -1,6 +1,8 @@
 import { Avatar, Typography } from "@mui/material";
 import React from "react";
 import FoodInputboxWithLabel from "../../components/Food/FoodInputboxWithLabel";
+import DetiledInputBoxWithLabel from "../../components/Food/DetiledInputBoxWithLabel";
+import UserButton from "../../components/user/UserButton";
 
 export default function FoodDrawer() {
   return (
@@ -28,7 +30,11 @@ export default function FoodDrawer() {
         }}
       >
         <FoodInputboxWithLabel info={{ label: "Name" }} />
+        <DetiledInputBoxWithLabel />
         <FoodInputboxWithLabel info={{ label: "Price" }} />
+      </div>
+      <div style={{ textAlign: "center", paddingTop: 120 }}>
+        <UserButton info={"Update"} />
       </div>
     </div>
   );

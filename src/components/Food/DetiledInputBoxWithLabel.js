@@ -1,11 +1,14 @@
 import { TextField, Typography } from "@mui/material";
 import React from "react";
 
-export default function FoodInputboxWithLabel({ info }) {
+export default function DetiledInputBoxWithLabel() {
   return (
     <div style={{ textAlign: "left" }}>
-      <Typography>{info.label}</Typography>
+      <Typography>Details</Typography>
       <TextField
+        id="outlined-multiline-static"
+        multiline
+        rows={4}
         fullWidth
         sx={{
           border: "2px solid #000000",
