@@ -6,7 +6,7 @@ import OrderDashboard from "./pages/OrderDashboard";
 import UserDashBoard from "./pages/UserDashBoard";
 import ReviewsDashboard from "./pages/ReviewsDashboard";
 import FoodManageDashbaord from "./pages/FoodManageDashbaord";
-import PaymentDashboard from "./pages/PaymentDashboard";
+// import PaymentDashboard from "./pages/PaymentDashboard";
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
           <Route path="/users" element={<UserDashBoard />} />
           <Route path="/reviews" element={<ReviewsDashboard />} />
           <Route path="/foods" element={<FoodManageDashbaord />} />
-          <Route path="/payment" element={<PaymentDashboard />} />
+          {/* <Route path="/payment" element={<PaymentDashboard />} /> */}
           <Route path="*" element={<NoPage />} />
         </Routes>
       </BrowserRouter>
