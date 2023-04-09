@@ -1,10 +1,13 @@
 import { Avatar, Typography } from "@mui/material";
 import React from "react";
-import FoodInputboxWithLabel from "../../components/Food/FoodInputboxWithLabel";
-import DetiledInputBoxWithLabel from "../../components/Food/DetiledInputBoxWithLabel";
-import UserButton from "../../components/user/UserButton";
+import FoodInputboxWithLabel from "../../../components/Food/FoodInputboxWithLabel";
+import DetiledInputBoxWithLabel from "../../../components/Food/DetiledInputBoxWithLabel";
+import UserButton from "../../../components/user/UserButton";
+import { useSelector } from "react-redux";
 
 export default function FoodDrawer() {
+  const { userSelectedFood } = useSelector((store) => store.foodReducer);
+  console.log(userSelectedFood);
   return (
     <div>
       <Typography>Food Details</Typography>

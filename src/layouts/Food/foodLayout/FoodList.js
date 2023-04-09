@@ -9,13 +9,7 @@ import {
 } from "@mui/material";
 import FoodDrawer from "./FoodDrawer";
 
-const rows = [
-  { id: 1, name: "John", age: 25 },
-  { id: 2, name: "Jane", age: 30 },
-  { id: 3, name: "Bob", age: 35 },
-];
-
-export default function Food() {
+export default function FoodList({ allFoods: rows, handleFoodSelect }) {
   const [selectedRow, setSelectedRow] = React.useState(null);
   const [drawerOpen, setDrawerOpen] = React.useState(false);
 
@@ -36,22 +30,23 @@ export default function Food() {
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((row, key) => (
+          {rows.map((val, key) => (
             <TableRow
               key={key}
               hover
               onClick={() => {
-                setSelectedRow(row);
+                setSelectedRow(val);
+                handleFoodSelect(val);
                 toggleDrawer();
               }}
-              style={selectedRow === row ? { backgroundColor: "#F8E6CC" } : {}}
+              style={selectedRow === val ? { backgroundColor: "#F8E6CC" } : {}}
             >
-              <TableCell>{row.name}</TableCell>
-              <TableCell>{row.age}</TableCell>
-              <TableCell>{row.age}</TableCell>
-              <TableCell>{row.age}</TableCell>
-              <TableCell>{row.age}</TableCell>
-              <TableCell>{row.age}</TableCell>
+              <TableCell>{val.name}</TableCell>
+              <TableCell>Name</TableCell>
+              <TableCell>Name</TableCell>
+              <TableCell>Name</TableCell>
+              <TableCell>Name</TableCell>
+              <TableCell>Name</TableCell>
             </TableRow>
           ))}
         </TableBody>
