@@ -1,8 +1,8 @@
 import { Typography } from "@mui/material";
 import React from "react";
-import User from "./User";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 import UserButton from "../../components/user/UserButton";
+import UserList from "./userLayout/UserList";
 
 export default function UserLayout() {
   return (
@@ -12,10 +12,10 @@ export default function UserLayout() {
           <Typography>User</Typography>
         </Grid2>
         <Grid2 item>
-          <UserButton info={"Add new User"} />
+          <UserButton info={"Add new Employee"} />
         </Grid2>
       </Grid2>
-      <User />
+      <UserList />
     </div>
   );
 }

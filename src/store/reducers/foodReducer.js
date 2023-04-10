@@ -10,8 +10,10 @@ const foodReducer = (state = inisialState, action) => {
   switch (action.type) {
     case Actions.GET_ALL_FOODS_LOADING:
       return { ...state, foodListLoading: "loading" };
+
     case Actions.GET_ALL_FOODS_SUCCESS:
       return { ...state, foodListLoading: "sucess", foodList: action.payload };
+
     case Actions.GET_ALL_FOODS_FAIL:
       return { ...state, foodListLoading: "fail", foodList: [] };
 

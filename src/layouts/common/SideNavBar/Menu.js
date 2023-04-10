@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const items = [
   { title: "Orders", route: "orders" },
-  { title: "Users", route: "users" },
+  { title: "Employees", route: "employees" },
   { title: "Reviews", route: "reviews" },
   { title: "Foods", route: "foods" },
 ];

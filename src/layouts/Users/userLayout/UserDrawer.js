@@ -1,8 +1,8 @@
 import { Typography } from "@mui/material";
 import React from "react";
-import DrawerInputBoxWithLabel from "../../components/user/DrawerInputBoxWithLabel";
-import DrawerDropDownWithLabel from "../../components/user/DrawerDropDownWithLabel";
-import UserButton from "../../components/user/UserButton";
+import DrawerInputBoxWithLabel from "../../../components/user/DrawerInputBoxWithLabel";
+import DrawerDropDownWithLabel from "../../../components/user/DrawerDropDownWithLabel";
+import UserButton from "../../../components/user/UserButton";
 
 export default function UserDrawer() {
   return (

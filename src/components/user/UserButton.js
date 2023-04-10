@@ -1,7 +1,7 @@
 import { Button } from "@mui/material";
 import React from "react";
 
-export default function UserButton({ info }) {
+export default function UserButton({ info, handleonclick }) {
   return (
     <div>
       <Button
@@ -9,8 +9,9 @@ export default function UserButton({ info }) {
         sx={{
           backgroundColor: "#FD5C25",
           textTransform: "none",
-          width: 150,
+          width: 200,
         }}
+        onClick={handleonclick}
       >
         {info}
       </Button>

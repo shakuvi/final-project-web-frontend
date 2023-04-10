@@ -21,10 +21,10 @@ export default function FoodList({ allFoods: rows, handleFoodSelect }) {
       <Table>
         <TableHead>
           <TableRow>
-            <TableCell>Customer</TableCell>
-            <TableCell>Order Type</TableCell>
-            <TableCell>Order Date</TableCell>
-            <TableCell>Order Time</TableCell>
+            <TableCell>Food Name</TableCell>
+            <TableCell>Price</TableCell>
+            <TableCell>Description</TableCell>
+            <TableCell>Category</TableCell>
             <TableCell>Order Count</TableCell>
             <TableCell>Order Status</TableCell>
           </TableRow>
@@ -42,9 +42,9 @@ export default function FoodList({ allFoods: rows, handleFoodSelect }) {
               style={selectedRow === val ? { backgroundColor: "#F8E6CC" } : {}}
             >
               <TableCell>{val.name}</TableCell>
-              <TableCell>Name</TableCell>
-              <TableCell>Name</TableCell>
-              <TableCell>Name</TableCell>
+              <TableCell>{val.price}</TableCell>
+              <TableCell>{val.description}</TableCell>
+              <TableCell>{val.image}</TableCell>
               <TableCell>Name</TableCell>
               <TableCell>Name</TableCell>
             </TableRow>

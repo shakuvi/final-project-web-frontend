@@ -15,7 +15,7 @@ const rows = [
   { id: 3, name: "Bob", age: 35 },
 ];
 
-export default function User() {
+export default function UserList() {
   const [selectedRow, setSelectedRow] = React.useState(null);
   const [drawerOpen, setDrawerOpen] = React.useState(false);
 
