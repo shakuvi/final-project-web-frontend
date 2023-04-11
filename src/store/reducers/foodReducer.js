@@ -4,6 +4,8 @@ const inisialState = {
   foodListLoading: "notStarted",
   foodList: [],
   userSelectedFood: {},
+  getFoodsAccodingToCetegory: [],
+  getFoodsAccodingToCetegoryLoading: "notStarted",
 };
 
 const foodReducer = (state = inisialState, action) => {
@@ -17,8 +19,26 @@ const foodReducer = (state = inisialState, action) => {
     case Actions.GET_ALL_FOODS_FAIL:
       return { ...state, foodListLoading: "fail", foodList: [] };
 
+    case Actions.GET_ALL_FOOD_ACCODING_TO_CATEGORY_LOADING:
+      return { ...state, getFoodsAccodingToCetegoryLoading: "loading" };
+
+    case Actions.GET_ALL_FOOD_ACCODING_TO_CATEGORY_SUCCESS:
+      return {
+        ...state,
+        getFoodsAccodingToCetegoryLoading: "sucess",
+        getFoodsAccodingToCetegory: action.payload,
+      };
+
+    case Actions.GET_ALL_FOOD_ACCODING_TO_CATEGORY_FAIL:
+      return {
+        ...state,
+        getFoodsAccodingToCetegoryLoading: "fail",
+        getFoodsAccodingToCetegory: [],
+      };
+
     case Actions.SET_USER_SELECTED_FOOD:
       return { ...state, userSelectedFood: action.payload };
+
     default:
       return state;
   }
