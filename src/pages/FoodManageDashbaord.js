@@ -6,12 +6,14 @@ import {
   getAllFoodAccodingToCategory,
   getAllFoods,
 } from "../store/actions/foodAction";
+import { getAllCatergories } from "../store/actions/categoryAction";
 
 export default function FoodManageDashbaord() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getAllFoods());
     dispatch(getAllFoodAccodingToCategory(categoryId)); // pass the category ID as a parameter
+    dispatch(getAllCatergories());
   }, [dispatch]);
 
   const categoryId = "64344860b4a92de07f4dfffc"; // set the category ID

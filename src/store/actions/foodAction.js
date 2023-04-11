@@ -43,7 +43,7 @@ export const getAllFoodAccodingToCategory = (category) => {
         category: category,
       })
       .then((response) => {
-        console.log(console.log(response.data));
+        console.log(response.data);
         dispatch({
           type: GET_ALL_FOOD_ACCODING_TO_CATEGORY_SUCCESS,
           payload: response.data.foods,
